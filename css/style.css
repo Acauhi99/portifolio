@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@1,500&display=swap');
+
+:root {
+  --cor-primaria: #194350;
+  --cor-secundaria: #ff8882;
+  --cor-terciaria: #ffc2b4;
+
+  --fonte-primaria: "Poppins", sans-serif;
+  --fonte-secundaria: "Bebas Neue", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+}
+
+.cabeçalho {
+  padding: 2% 0% 0% 8%;
+}
+
+.cabeçalho__menu {
+  display: flex;
+  gap: 80px;
+}
+
+.cabeçalho__menu__link {
+  font-family: var(--fonte-primaria);
+  font-size: 1.5rem;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+}
+
+.apresentaçao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5% 8%;
+  gap: 82px;
+}
+
+.apresentaçao__conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.apresentaçao__imagem {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.apresentaçao__gif {
+  width: 50%;
+  border-radius: 16px;
+}
+
+.apresentaçao__conteudo__titulo {
+  font-size: 2.25rem;
+  font-family: var(--fonte-primaria);
+}
+
+.apresentaçao__conteudo__paragrafo {
+  font-size: 1.5rem;
+  font-family: var(--fonte-secundaria);
+}
+
+.apresentaçao__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.apresentaçao__conteudo__subtitulo {
+  font-family: var(--fonte-primaria);
+  font-size: 1.5rem;
+}
+
+.apresentaçao__links__link {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-family: var(--fonte-secundaria);
+  padding: 21.5px 0;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  border: 2px solid var(--cor-terciaria);
+}
+
+.apresentaçao__conteudo__paragrafo__link {
+  color: var(--cor-terciaria);
+}
+
+.apresentaçao__grupo {
+  border: 0;
+}
+
+.apresentaçao__campo {
+  margin-bottom: 1em;
+}
+
+.apresentaçao__campo label {
+  margin-bottom: 0.2em;
+  color: var(--cor-terciaria);
+  display: block;
+  font-size: 1.5rem;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.apresentaçao__links__link:hover {
+  background-color: var(--cor-terciaria);
+}
+
+fieldset.apresentaçao__grupo .apresentaçao__campo {
+  float: left;
+  margin-right: 1em;
+}
+
+.apresentaçao__campo input[type="text"],
+.apresentaçao__campo input[type="email"],
+.apresentaçao__campo textarea {
+  padding: 0.2em;
+  border: 1px solid var(--cor-terciaria);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.apresentação__botao__enviar {
+  font-size: 1.2em;
+  background: var(--cor-primaria);
+  border: 2px solid var(--cor-terciaria);
+  margin-bottom: 1em;
+  color: var(--cor-secundaria);
+  padding: 0.2em 0.6em;
+  font-family: var(--fonte-secundaria);
+}
+
+.apresentação__botao__enviar:hover {
+  background-color: var(--cor-terciaria);
+}
+
+.titulo-destaque {
+  color: var(--cor-terciaria);
+}
+
+.rodape {
+  color: var(--cor-primaria);
+  background-color: var(--cor-terciaria);
+  padding: 16px;
+  text-align: center;
+  font-family: var(--fonte-secundaria);
+  font-size: 1.5rem;
+}
+
+input,
+textarea,
+button {
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+@media (max-width: 1000px) {
+  .cabeçalho {
+    padding: 8% 0% 2% 0%;
+  }
+
+  .cabeçalho__menu {
+    justify-content: center;
+  }
+
+  .apresentaçao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+
+  .apresentaçao__conteudo {
+    width: auto;
+  }
+}

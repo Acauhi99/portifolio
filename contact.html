@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header class="cabeçalho">
+      <nav class="cabeçalho__menu">
+        <a class="cabeçalho__menu__link" href="index.html">Home</a>
+        <a class="cabeçalho__menu__link" href="about.html">About</a>
+        <a class="cabeçalho__menu__link" href="contact.html">Contact</a>
+      </nav>
+    </header>
+    <main class="apresentaçao">
+      <section class="apresentaçao__conteudo">
+        <form
+          action="mailto:acauhi.mateus@gmai.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <fieldset class="apresentaçao__grupo">
+            <div class="apresentaçao__campo">
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" required autofocus />
+            </div>
+
+            <div class="apresentaçao__campo">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </fieldset>
+
+          <div class="apresentaçao__campo">
+            <label for="mensagem">Sua mensagem</label> <br />
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              cols="50"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+
+          <button class="apresentação__botao__enviar" type="submit">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
