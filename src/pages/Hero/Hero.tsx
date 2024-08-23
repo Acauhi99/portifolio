@@ -58,7 +58,7 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                I'm a Full Stack Developer
+                Desenvolvedor Full-Stack
               </Typography>
               <Grid
                 container
