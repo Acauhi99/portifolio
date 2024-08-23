@@ -16,6 +16,13 @@ const FooterBar = () => {
 
   const menuItems = ["Home", "About", "Skills", "Projects"];
 
+  const handleMenuItemClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledFooter>
       <Container maxWidth="lg">
@@ -29,7 +36,7 @@ const FooterBar = () => {
               justifyContent="center"
             >
               <CopyrightIcon sx={{ marginRight: 1 }} />
-              Mateus Acauhi
+              <span style={{ fontSize: "1.5rem" }}>Mateus Acauhi</span>
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -38,7 +45,12 @@ const FooterBar = () => {
                 <Typography
                   key={item}
                   variant="body1"
-                  sx={{ margin: theme.spacing(1) }}
+                  sx={{
+                    margin: theme.spacing(1),
+                    cursor: "pointer",
+                    fontSize: "1.3rem",
+                  }}
+                  onClick={() => handleMenuItemClick(item.toLowerCase())}
                 >
                   {item}
                 </Typography>

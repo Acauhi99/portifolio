@@ -31,18 +31,46 @@ const NavBar = () => {
     setAnchorEl(null);
   };
 
+  const handleMenuItemClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    handleMenuClose();
+  };
+
   const menuItems = (
     <>
-      <MenuItem onClick={handleMenuClose}>Home</MenuItem>
-      <MenuItem onClick={handleMenuClose}>About</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Skills</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Projects</MenuItem>
+      <MenuItem
+        sx={{ fontSize: "1.2rem" }}
+        onClick={() => handleMenuItemClick("hero")}
+      >
+        Home
+      </MenuItem>
+      <MenuItem
+        sx={{ fontSize: "1.2rem" }}
+        onClick={() => handleMenuItemClick("about")}
+      >
+        About
+      </MenuItem>
+      <MenuItem
+        sx={{ fontSize: "1.2rem" }}
+        onClick={() => handleMenuItemClick("skills")}
+      >
+        Skills
+      </MenuItem>
+      <MenuItem
+        sx={{ fontSize: "1.2rem" }}
+        onClick={() => handleMenuItemClick("projects")}
+      >
+        Projects
+      </MenuItem>
     </>
   );
 
   return (
     <>
-      <AppBar position="absolute">
+      <AppBar position="fixed">
         <StyledToolBar>
           {isMobile ? (
             <>

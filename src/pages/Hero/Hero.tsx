@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import DownloadIcon from "@mui/icons-material/Download";
 import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { Theme, useTheme } from "@mui/material/styles";
 import Avatar from "../../assets/images/avatar.png";
@@ -46,14 +47,14 @@ const Hero = () => {
             <Grid item xs={12} md={7}>
               <Typography
                 color="primary.contrastText"
-                variant="h1"
+                variant="h2"
                 textAlign="center"
               >
                 Mateus Acauhi
               </Typography>
               <Typography
                 color="primary.contrastText"
-                variant="h2"
+                variant="h4"
                 textAlign="center"
                 pb={2}
               >
@@ -91,6 +92,22 @@ const Hero = () => {
                   <StyledButton component="a" href="/cv.pdf" download>
                     <DownloadIcon />
                     <Typography>Download CV</Typography>
+                  </StyledButton>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <StyledButton
+                    component="a"
+                    href="https://github.com/Acauhi99"
+                    download
+                  >
+                    <GitHubIcon />
+                    <Typography>Repositories</Typography>
                   </StyledButton>
                 </Grid>
               </Grid>
