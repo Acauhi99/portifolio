@@ -6,14 +6,29 @@ import {
   CardContent,
   CardMedia,
   Container,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
   Grid,
   Typography,
 } from "@mui/material";
 import { styled, Theme, useTheme } from "@mui/material/styles";
+import { useState } from "react";
 import FinanceView from "../../assets/images/finance-view.png";
+import NPMPackage from "../../assets/images/npm-package.png";
+import TeamBuilder from "../../assets/images/team-builder.png";
 import TrackPath from "../../assets/images/track-path.png";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
+const projects: Project[] = [
   {
     title: "Finance View",
     description:
@@ -29,21 +44,35 @@ const projects = [
     link: "https://dashboard.trackpath.com.br/",
   },
   {
-    title: "Projeto 3",
-    description: "Descrição do Projeto 3",
-    image: "/path/to/image3.jpg",
-    link: "https://linkprojeto3.com",
+    title: "NPM Package Explorer",
+    description:
+      "Aplicacao pura de Front-end que procura e exibi detalhes de pacotes NPM pelo nome. Contruido com React, TypeScript, TailwindCSS, React Router. Deployado na Vercel.",
+    image: NPMPackage,
+    link: "https://npm-package-search-iota.vercel.app/",
   },
   {
-    title: "Projeto 4",
-    description: "Descrição do Projeto 4",
-    image: "/path/to/image4.jpg",
-    link: "https://linkprojeto4.com",
+    title: "Team Builder",
+    description:
+      "Primeiro projeto de estudo puramente Front-end, com JavaScript, fazendo requesicao para PokeAPI e exibindo os pokemons em cards. Deployado no GithubPages.",
+    image: TeamBuilder,
+    link: "https://acauhi99.github.io/poke-builder/",
   },
 ];
 
 const Projects = () => {
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const handleClickOpen = (project: Project) => {
+    setSelectedProject(project);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setSelectedProject(null);
+  };
 
   const StyledProjects = styled("div")(({ theme }: { theme: Theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -55,6 +84,13 @@ const Projects = () => {
     minHeight: "100vh",
   }));
 
+  const StyledCard = styled(Card)({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    height: "100%",
+  });
+
   return (
     <StyledProjects theme={theme} id="projects">
       <Container maxWidth="lg">
@@ -63,13 +99,13 @@ const Projects = () => {
         </Typography>
         <Grid container spacing={4}>
           {projects.map((project, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
-              <Card>
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+              <StyledCard onClick={() => handleClickOpen(project)}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
                     alt={project.title}
-                    height="140"
+                    height="180"
                     image={project.image}
                     title={project.title}
                   />
@@ -96,11 +132,36 @@ const Projects = () => {
                     Ver Projeto
                   </Button>
                 </CardActions>
-              </Card>
+              </StyledCard>
             </Grid>
           ))}
         </Grid>
       </Container>
+      <Dialog open={open} onClose={handleClose}>
+        <DialogTitle>{selectedProject?.title}</DialogTitle>
+        <DialogContent sx={{ fontSize: "1.2rem" }}>
+          <CardMedia
+            component="img"
+            alt={selectedProject?.title}
+            height="180"
+            image={selectedProject?.image}
+            title={selectedProject?.title}
+          />
+          <DialogContentText>{selectedProject?.description}</DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} color="primary">
+            Fechar
+          </Button>
+          <Button
+            color="primary"
+            href={selectedProject?.link || "#"}
+            target="_blank"
+          >
+            Ver Projeto
+          </Button>
+        </DialogActions>
+      </Dialog>
     </StyledProjects>
   );
 };
