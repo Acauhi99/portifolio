@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Divider, Typography } from "@mui/material";
 import { styled, Theme, useTheme } from "@mui/material/styles";
 
 const Skills = () => {
@@ -24,20 +24,18 @@ const Skills = () => {
     },
   }));
 
-  const VerticalDivider = styled("div")(() => ({
-    width: "2px",
-    backgroundColor: theme.palette.primary.contrastText,
-    height: "80%",
-    margin: "0 20px",
-  }));
-
   return (
     <StyledSkills theme={theme} id="skills">
       <Container
         maxWidth="lg"
-        style={{ display: "flex", alignItems: "center" }}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}
       >
-        <Box flex={1} textAlign="center">
+        <Box textAlign="center" mb={4}>
           <Typography variant="h3" gutterBottom>
             Habilidades
           </Typography>
@@ -46,8 +44,12 @@ const Skills = () => {
             no desenvolvimento de aplicações web.
           </Typography>
         </Box>
-        <VerticalDivider />
-        <Box flex={1} display="flex" flexWrap="wrap" justifyContent="center">
+        <Divider
+          variant="middle"
+          orientation="horizontal"
+          sx={{ width: "100%", marginBottom: "20px", borderBottomWidth: "2px" }}
+        />
+        <Box display="flex" flexWrap="wrap" justifyContent="center">
           <a
             href="https://www.typescriptlang.org/docs/"
             target="_blank"
