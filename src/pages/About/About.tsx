@@ -18,7 +18,7 @@ const About = () => {
     <StyledAbout theme={theme} id="about">
       <Container maxWidth="lg">
         <Typography variant="h3" textAlign="center" gutterBottom>
-          About Me
+          Sobre Mim
         </Typography>
         <Typography variant="body1" textAlign="center" fontSize={30}>
           Desenvolvedor Júnior e estudante de Análise e Desenvolvimento de

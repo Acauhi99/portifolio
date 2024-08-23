@@ -51,7 +51,7 @@ const NavBar = () => {
         sx={{ fontSize: "1.2rem" }}
         onClick={() => handleMenuItemClick("about")}
       >
-        Sobre
+        Sobre Mim
       </MenuItem>
       <MenuItem
         sx={{ fontSize: "1.2rem" }}
