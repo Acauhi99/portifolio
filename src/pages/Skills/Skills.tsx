@@ -12,6 +12,10 @@ const Skills = () => {
     alignItems: "center",
     justifyContent: "center",
     minHeight: "100vh",
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      padding: theme.spacing(4, 0),
+    },
   }));
 
   const StyledImg = styled("img")(() => ({
