@@ -79,7 +79,7 @@ const Hero = () => {
                     href="mailto:acauhi.mateus@gmail.com"
                   >
                     <ForwardToInboxIcon />
-                    <Typography>Contact Me</Typography>
+                    <Typography>Contato</Typography>
                   </StyledButton>
                 </Grid>
                 <Grid
@@ -107,7 +107,7 @@ const Hero = () => {
                     download
                   >
                     <GitHubIcon />
-                    <Typography>Repositories</Typography>
+                    <Typography>Repositorios</Typography>
                   </StyledButton>
                 </Grid>
               </Grid>
