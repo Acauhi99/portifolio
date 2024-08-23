@@ -45,25 +45,25 @@ const NavBar = () => {
         sx={{ fontSize: "1.2rem" }}
         onClick={() => handleMenuItemClick("hero")}
       >
-        Home
+        Inicio
       </MenuItem>
       <MenuItem
         sx={{ fontSize: "1.2rem" }}
         onClick={() => handleMenuItemClick("about")}
       >
-        About
+        Sobre
       </MenuItem>
       <MenuItem
         sx={{ fontSize: "1.2rem" }}
         onClick={() => handleMenuItemClick("skills")}
       >
-        Skills
+        Habilidades
       </MenuItem>
       <MenuItem
         sx={{ fontSize: "1.2rem" }}
         onClick={() => handleMenuItemClick("projects")}
       >
-        Projects
+        Projetos
       </MenuItem>
     </>
   );
