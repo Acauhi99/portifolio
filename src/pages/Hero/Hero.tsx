@@ -47,7 +47,7 @@ const Hero = () => {
             <Grid item xs={12} md={7}>
               <Typography
                 color="primary.contrastText"
-                variant="h2"
+                variant="h1"
                 textAlign="center"
               >
                 Mateus Acauhi

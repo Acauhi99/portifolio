@@ -43,7 +43,7 @@ const Skills = () => {
           <Typography variant="h3" gutterBottom>
             Habilidades
           </Typography>
-          <Typography variant="body1" fontSize={30} paragraph>
+          <Typography variant="body1" fontSize={24} paragraph>
             Principais tecnologias de dominio Back-end e Front-end que utilizo
             no desenvolvimento de aplicações web.
           </Typography>

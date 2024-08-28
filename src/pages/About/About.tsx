@@ -20,7 +20,7 @@ const About = () => {
         <Typography variant="h3" textAlign="center" gutterBottom>
           Sobre Mim
         </Typography>
-        <Typography variant="body1" textAlign="center" fontSize={30}>
+        <Typography variant="body1" textAlign="center" fontSize={24}>
           Desenvolvedor Júnior e estudante de Análise e Desenvolvimento de
           Sistemas. Excelente conhecimento em lógica de programação, estrutura
           de dados, orientação a objetos, bancos de dados SQL e NoSQL,
